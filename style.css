@@ -1,0 +1,128 @@
+/* CONFIGURAÇÕES GERAIS */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, sans-serif; background: #f5f6f8; color: #252525; }
+
+/* CABEÇALHO COMPARTILHADO - PADRÃO DA PÁGINA PRINCIPAL */
+header { background: #fff; padding: 18px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 3px 12px #00000015; border-bottom: 3px solid #e31837; position: sticky; top: 0; z-index: 100; }
+.logo, header h1 { color: #e31837; font-size: 28px; font-weight: bold; letter-spacing: 1px; }
+.logo span { display: block; font-size: 9px; color: #777; letter-spacing: 3px; margin-top: 4px; }
+.header-label { color: #d71920; font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+nav { display: flex; gap: 25px; }
+nav a { text-decoration: none; color: #173b6c; font-weight: bold; transition: .3s; }
+nav a:hover { color: #e31837; }
+
+/* PÁGINA PRINCIPAL */
+.banner { min-height: 540px; background: linear-gradient(90deg, #102f59e8, #102f5940), url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600') center/cover; display: flex; align-items: center; padding: 70px 10%; color: white; }
+.banner-conteudo { max-width: 600px; }
+.banner h1 { font-size: 52px; margin-bottom: 20px; }
+.banner p { font-size: 19px; line-height: 1.7; margin-bottom: 30px; }
+.botao { display: inline-block; background: #d51d35; color: white; padding: 15px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: .3s; border: none; cursor: pointer; }
+.botao:hover { background: #a90f25; transform: translateY(-3px); }
+section { padding: 75px 9%; }
+.titulo { text-align: center; color: #173b6c; font-size: 34px; margin-bottom: 18px; }
+.subtitulo { text-align: center; color: #666; margin-bottom: 45px; line-height: 1.6; }
+.sobre { display: flex; align-items: center; gap: 45px; flex-wrap: wrap; background: white; }
+.sobre img { width: 45%; min-width: 280px; height: 350px; object-fit: cover; border-radius: 15px; flex: 1; }
+.sobre-texto { flex: 1; min-width: 280px; }
+.sobre-texto h2 { color: #291d6c; font-size: 32px; margin-bottom: 20px; }
+.sobre-texto p { line-height: 1.8; color: #555; margin-bottom: 15px; }
+.produtos { background: #eef2f7; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+.card { background: white; border-radius: 15px; overflow: hidden; text-align: center; box-shadow: 0 5px 20px #00000010; transition: .3s; padding-bottom: 20px; }
+.card:hover { transform: translateY(-8px); }
+.card img { display: block; width: 100%; height: 220px; object-fit: cover; }
+.card h3 { color: #173b6c; margin: 20px 10px 10px; }
+.card p { color: #666; padding: 0 20px 25px; line-height: 1.6; }
+.diferenciais { background: #173b6c; color: white; text-align: center; }
+.diferenciais .titulo { color: white; }
+.diferenciais .subtitulo { color: #dce7f4; }
+.beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
+.beneficio img { display: block; width: 100%; max-width: 1000px; height: auto; border-radius: 5px; }
+.beneficio span { font-size: 40px; }
+.beneficio h3 { margin: 15px 0; }
+.beneficio p { line-height: 1.6; color: #e2eaf5; }
+.contato { text-align: center; background: white; }
+.contato p { margin: 15px 0 25px; color: #555; }
+
+/* GALERIAS DE CÃES E GATOS */
+#galeria { padding: 50px 8%; width: 100%; }
+#galeria h2 { font-size: clamp(20px, 3vw, 50px); text-align: center; margin-bottom: 25px; }
+#galeria .galeria + h2 { margin-top: 30px; }
+.galeria { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; width: 100%; }
+.imagem { width: 100%; min-width: 0; text-align: center; }
+.imagem img { display: block; width: 100%; height: auto; border-radius: 50px; }
+.imagem p { font-size: 14px; color: #333; margin-top: 10px; margin-bottom: 20px; text-align: center; }
+.titulo_caes, .titulo_caes2 { text-align: center; }
+/* Apenas a página de comparação usa Flexbox */
+#galeria.comparacao > .galeria { display: flex; justify-content: center; flex-wrap: wrap; gap: 60px; }
+#galeria.comparacao > .galeria .imagem { width: calc((100% - 50px) / 3); flex-shrink: 0; }
+
+/* ENTREVISTA - ELEMENTOS ESPECÍFICOS DO STYLE2 */
+.hero, .introduction, .interview, .final-section { font-family: 'Montserrat', Arial, sans-serif; }
+.hero { padding: 100px 15%; background: #f7f7f7; }
+.category, .section-tag { color: #d71920; font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+.hero h1 { font-size: 48px; line-height: 1.25; max-width: 800px; margin: 25px 0; letter-spacing: -1.5px; }
+.hero h1 span { color: #d71920; display: block; }
+.hero p { max-width: 680px; color: #777; font-size: 14px; line-height: 2; }
+.hero-line { width: 65px; height: 4px; background: #d71920; margin: 35px 0 20px; }
+.reading { font-size: 9px; font-weight: 700; color: #888; letter-spacing: 1.5px; }
+.introduction { padding: 85px 20%; text-align: center; }
+.introduction h2 { font-size: 31px; margin: 20px 0; }
+.introduction p { font-size: 14px; color: #777; line-height: 2; }
+.interview { background: #fafafa; padding: 85px 15%; }
+.interview-heading { text-align: center; margin-bottom: 55px; }
+.interview-heading h2 { font-size: 34px; margin: 18px 0 12px; }
+.interview-heading p { font-size: 13px; color: #888; }
+.topic { display: grid; grid-template-columns: 65px minmax(0, 1fr); gap: 25px; padding: 35px; background: #fff; margin-bottom: 20px; border: 1px solid #eee; border-radius: 10px; transition: .3s; }
+.topic:hover { border-color: #d71920; transform: translateY(-3px); box-shadow: 0 10px 25px #00000008; }
+.topic-number { font-size: 34px; font-weight: 800; color: #d71920; }
+.topic-content h3 { font-size: 19px; margin-bottom: 17px; }
+.topic-content h4 { font-size: 13px; line-height: 1.7; margin-bottom: 12px; color: #444; }
+.topic-content p { font-size: 13px; color: #777; line-height: 2; text-align: justify; }
+.final-section { padding: 100px 15%; text-align: center; }
+.final-section h2 { font-size: 34px; margin: 20px 0; }
+.final-section > p { max-width: 800px; margin: auto; color: #777; font-size: 14px; line-height: 2; text-align: center; }
+.final-highlight { margin-top: 45px; background: #292929; padding: 40px; border-radius: 10px; }
+.final-highlight span { color: #f05a60; font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+.final-highlight h3 { color: white; font-size: 21px; line-height: 1.6; margin-top: 15px; }
+.banner-topo { display: flex; width: 100%; height: 280px; gap: 5px; overflow: hidden; }
+.banner-topo img { width: calc((100% - 5px) / 2); height: 100%; object-fit: cover; display: block; }
+
+/* RODAPÉ COMPARTILHADO - PADRÃO DA PÁGINA PRINCIPAL */
+footer { background: #173b6c; color: white; text-align: center; padding: 25px; margin-top: 40px; }
+footer h2 { color: #e31b23; font-size: 24px; letter-spacing: 3px; margin-bottom: 15px; }
+footer p { font-size: inherit; letter-spacing: normal; margin-bottom: 0; }
+footer span { color: #aaa; font-size: 11px; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #galeria.comparacao > .galeria { gap: 25px; }
+    #galeria.comparacao > .galeria .imagem { width: calc((100% - 25px) / 2); }
+}
+@media (max-width: 768px) {
+    .hero { padding: 70px 8%; }
+    .hero h1 { font-size: 36px; }
+    .introduction { padding: 65px 8%; }
+    .interview { padding: 65px 7%; }
+    .topic { grid-template-columns: 45px minmax(0, 1fr); gap: 12px; padding: 23px 17px; }
+    .topic-number { font-size: 25px; }
+    .topic-content h3 { font-size: 16px; }
+    .final-section { padding: 70px 8%; }
+    .final-highlight { padding: 28px 20px; }
+    .header-label { font-size: 8px; }
+}
+@media (max-width: 700px) {
+    header { flex-direction: column; gap: 18px; }
+    nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .banner h1 { font-size: 36px; }
+    .sobre img { width: 100%; }
+}
+@media (max-width: 500px) {
+    .galeria { grid-template-columns: 1fr; }
+    #galeria.comparacao > .galeria { flex-direction: column; align-items: center; }
+    #galeria.comparacao > .galeria .imagem { width: 100%; }
+    #galeria h2 { font-size: 20px; white-space: normal; }
+    .hero h1 { font-size: 30px; }
+}
